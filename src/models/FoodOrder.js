@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
   const FoodOrder = sequelize.define("FoodOrder", {
     allTotalPrice: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.FLOAT,
       allowNull: false,
       validate: {
         notEmpty: true,

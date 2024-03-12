@@ -1,2 +1,2 @@
 const { sequelize } = require("./src/models");
-sequelize.sync({});
+sequelize.sync({ force: true });

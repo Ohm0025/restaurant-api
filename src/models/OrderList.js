@@ -1,14 +1,14 @@
 module.exports = (sequelize, DataTypes) => {
   const OrderList = sequelize.define("OrderList", {
     amount: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         notEmpty: true,
       },
     },
     totalPrice: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.FLOAT,
       allowNull: false,
       validate: {
         notEmpty: true,
