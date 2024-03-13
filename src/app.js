@@ -10,7 +10,7 @@ const errorMiddleware = require("./middleware/errorMiddleware");
 const authenMiddleware = require("./middleware/authenMiddleware");
 
 const app = express();
-const node_env = process.env.NODE_ENV || "development";
+const node_env = process.env.NODE_ENV === "development" ? "dev" : "";
 
 app.use(cors());
 app.use(express.json());
