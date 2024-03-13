@@ -14,3 +14,12 @@ exports.createUser = async (userObj) => {
 
   return userProfile;
 };
+
+exports.findLoginUser = async (email) => {
+  const findUser = await User.findOne({
+    where: { email: email },
+    attributes: ["id", "email", "password"],
+  });
+
+  return findUser;
+};

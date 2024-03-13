@@ -12,15 +12,15 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   });
-  FoodOrder.associate = (db) => {
-    FoodOrder.hasOne(db.User, {
-      foreignKey: {
-        name: "userId",
-        allowNull: false,
-      },
-      onDelete: "CASCADE",
-      onUpdate: "CASCADE",
-    });
-  };
+  // FoodOrder.associate = (db) => {
+  //   FoodOrder.hasOne(db.User, {
+  //     foreignKey: {
+  //       name: "userId",
+  //       allowNull: false,
+  //     },
+  //     onDelete: "CASCADE",
+  //     onUpdate: "CASCADE",
+  //   });
+  // };
   return FoodOrder;
 };
