@@ -23,6 +23,7 @@ exports.registerController = async (req, res, next) => {
     const userProfile = await createUser({
       ...reqBody,
       password: hashPassword,
+      role: "client",
     });
     res.status(201).json({ userProfile, message: "create new user success" });
   } catch (err) {
