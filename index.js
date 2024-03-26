@@ -17,16 +17,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan(node_env));
 
+app.get("/testvercel", (req, res) => {
+  res.status(200).send("hello vercel");
+});
 app.use("/", authenMiddleware, router);
 
 app.all("*", notfoundMiddleware);
 app.use(errorMiddleware);
 
 const port = process.env.PORT || 8080;
-
-app.get("/", (req, res) => {
-  res.status(200).send("hello vercel");
-});
 
 app.listen(port, () => console.log("server on port ", port));
 
