@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./api",
-    "sync": "node syncDB.js"
+    "start": "nodemon ./src/app.js",
+    "sync": "node syncDB.js",
+    "vercel-build": "echo hello"
   },
   "keywords": [],
   "author": "",
