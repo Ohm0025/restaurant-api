@@ -4,10 +4,10 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 
-const router = require("./src/routes/router");
-const notfoundMiddleware = require("./src/middleware/notfoundMiddleware");
-const errorMiddleware = require("./src/middleware/errorMiddleware");
-const authenMiddleware = require("./src/middleware/authenMiddleware");
+const router = require("../src/routes/router");
+const notfoundMiddleware = require("../src/middleware/notfoundMiddleware");
+const errorMiddleware = require("../src/middleware/errorMiddleware");
+const authenMiddleware = require("../src/middleware/authenMiddleware");
 
 const app = express();
 const node_env = process.env.NODE_ENV === "development" ? "dev" : "";
