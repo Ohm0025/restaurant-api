@@ -24,6 +24,10 @@ app.use(errorMiddleware);
 
 const port = process.env.PORT || 8080;
 
+app.get("/", (req, res) => {
+  res.status(200).send("hello vercel");
+});
+
 app.listen(port, () => console.log("server on port ", port));
 
 module.exports = app;
