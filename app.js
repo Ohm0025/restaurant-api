@@ -25,3 +25,5 @@ app.use(errorMiddleware);
 const port = process.env.PORT || 8080;
 
 app.listen(port, () => console.log("server on port ", port));
+
+module.exports = app;
